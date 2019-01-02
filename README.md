@@ -2,6 +2,9 @@
 
 A simple habit tracker.
 
+![demo](https://github.com/bunchesofdonald/habit-cli/blob/master/demo.svg)
+
+
 ## Installation
 
 ```sh
