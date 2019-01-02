@@ -61,6 +61,7 @@ def list():
 @click.option("--yesterday", "-y", is_flag=True, help="Log habit to yesterday's log.")
 @click.argument("habit")
 def log(habit, yesterday):
+    """Mark a habit as complete for the day"""
     data = load_habit_data()
     habit = habit.lower()
     try:
@@ -98,8 +99,9 @@ def log(habit, yesterday):
 
 
 @cli.command()
-@click.option("--yesterday", "-y", is_flag=True, help="Log habit to yesterday's log.")
+@click.option("--yesterday", "-y", is_flag=True, help="Show yesterday's log.")
 def show(yesterday=False):
+    """Show progress on habits for the day"""
     data = load_habit_data()
     log_date = get_log_date(yesterday)
 
